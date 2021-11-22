@@ -10,4 +10,4 @@ export default Card;
 /* Sometimes you wanna have a component where
 you don't configure everything through props
 but where instead you're able to pass content
-between the opening and closing tags of that component. */
+between the opening and closing tags of that component.*/

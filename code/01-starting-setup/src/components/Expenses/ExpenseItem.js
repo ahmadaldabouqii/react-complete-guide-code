@@ -2,7 +2,7 @@ import ExpenseDate from '../Expenses/ExpenseDate';
 import Card from '../UI/Card';
 import '../Expenses/ExpenseItem.css';
 
-/* This component is just about outputting an expense item.*/
+/* This component is just about outputting an expense item. */
 
 function ExpenseItem(props) {
   return (
