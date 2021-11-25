@@ -100,14 +100,18 @@ const ExpenseForm = () => {
       date: new Date(enteredDate),
     };
 
-    console.log(expenseData);
-
     /* 
       clear user input after submitusing (Two-Way Binding):
       which simply means that for inputs we don't just
       listen to changes, but we can also pass a new value
-      back into the input using value attribute (value={}).
+      back into the input using value attribute (value={newValue})
+      which is default attribute to input element.
       So that we can reset or change the input programmatically.
+     
+      So now it is this two-way binding; because now we don't
+      just listen to changes(onChange) in the input to update
+      our stat, but we also feed the state back into the input
+      so that when we change the state, we also change input.
     */
 
     setEnteredTitle('');
