@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import './ExpenseFrom.css';
 
-const ExpenseForm = () => {
+const ExpenseForm = props => {
   const [enteredTitle, setEnteredTitle] = useState('');
   const [enteredAmount, setEnteredAmount] = useState('');
   const [enteredDate, setEnteredDate] = useState('');
 
+  // for approach 2&3
   //   const [userInput, setUserInput] = useState({
   //     enteredTitle: '',
   //     enteredAmount: '',
@@ -25,8 +26,8 @@ const ExpenseForm = () => {
     // });
 
     /*
-     whenever you update your state
-     and you depend on the previous state, like(counter)
+     whenever you update your state and you
+     depend on the previous state, like(counter)
      you should not do it like this(approach #1)
      but you should use an alternative form
      of this state updating function.
@@ -100,8 +101,10 @@ const ExpenseForm = () => {
       date: new Date(enteredDate),
     };
 
-    /* 
-      clear user input after submitusing (Two-Way Binding):
+    props.onSaveExpenseData(expenseData);
+
+    /*
+      clear user input after submit using (Two-Way Binding):
       which simply means that for inputs we don't just
       listen to changes, but we can also pass a new value
       back into the input using value attribute (value={newValue})
